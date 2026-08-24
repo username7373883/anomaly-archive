@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERA Secure Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="screen-frame">
+        <div class="scanlines"></div>
+
+        <!-- BOOT / LOGIN SEQUENCE -->
+        <section id="boot-screen" class="boot-screen">
+            <div class="terminal-header">
+                <span>CERA SECURE TERMINAL</span>
+                <span>NODE: ARCHIVE-01</span>
+            </div>
+
+            <div class="terminal-body">
+                <p class="boot-line">Initializing CERA archive environment...</p>
+                <p class="boot-line">Connecting to secure personnel registry...</p>
+                <p class="boot-line">Establishing encrypted session...</p>
+
+                <div class="login-box">
+                    <div class="line">
+                        <span class="label">USERNAME:</span>
+                        <span id="usernameText" class="typed-text"></span>
+                    </div>
+
+                    <div class="line">
+                        <span class="label">PASSWORD:</span>
+                        <span id="passwordText" class="typed-text"></span>
+                    </div>
+                </div>
+
+                <div class="status-box">
+                    <p id="statusText">Awaiting credentials...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCESS GRANTED OVERLAY -->
+        <section id="access-screen" class="access-screen hidden">
+            <div class="access-box">
+                <h1>ACCESS GRANTED</h1>
+                <p>Clearance confirmed.</p>
+                <p>Welcome to the CERA Archive Network.</p>
+            </div>
+        </section>
+
+        <!-- MAIN DASHBOARD -->
+        <section id="dashboard" class="dashboard hidden">
+            <header class="topbar">
+                <div>
+                    <h1>CERA ARCHIVE SYSTEM</h1>
+                    <p>Containment Examination & Research Authority</p>
+                </div>
+
+                <div class="clearance-panel">
+                    <p><strong>Operator:</strong> Dr. Harlow</p>
+                    <p><strong>Clearance:</strong> Level 4</p>
+                    <p><strong>Status:</strong> Active Session</p>
+                </div>
+            </header>
+
+            <nav class="nav-buttons">
+                <button class="nav-btn">HOME</button>
+                <button class="nav-btn">DATABASE</button>
+                <button class="nav-btn">FACILITIES</button>
+                <button class="nav-btn">INCIDENTS</button>
+                <button class="nav-btn">PERSONNEL</button>
+            </nav>
+
+            <main class="card-grid">
+                <a href="#" class="archive-card image-card entity-card">
+                    <div class="card-overlay">
+                        <h2>ENTITY FILES</h2>
+                        <p>Biological, hostile, passive, and unknown anomalies.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="archive-card image-card facility-card">
+                    <div class="card-overlay">
+                        <h2>FACILITIES</h2>
+                        <p>Containment sites, labs, black locations, and sectors.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="archive-card image-card incident-card">
+                    <div class="card-overlay">
+                        <h2>INCIDENT LOGS</h2>
+                        <p>Breaches, field events, recoveries, and failed operations.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="archive-card image-card personnel-card">
+                    <div class="card-overlay">
+                        <h2>PERSONNEL</h2>
+                        <p>Researchers, agents, security staff, and administration.</p>
+                    </div>
+                </a>
+            </main>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
