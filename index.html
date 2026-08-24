@@ -2,109 +2,399 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>CERA Secure Archive</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
+
 <body>
 
     <div class="screen-frame">
+
+        <!-- Background logo watermark -->
+        <div class="background-logo">
+            <img
+                src="logoicon.png"
+                alt=""
+                aria-hidden="true"
+            >
+        </div>
+
+        <!-- CRT / scanline effect -->
         <div class="scanlines"></div>
 
-        <!-- BOOT / LOGIN SEQUENCE -->
-        <section id="boot-screen" class="boot-screen">
+
+        <!-- ===================================================== -->
+        <!-- BOOT / LOGIN SCREEN                                   -->
+        <!-- ===================================================== -->
+
+        <section
+            id="boot-screen"
+            class="boot-screen"
+        >
+
             <div class="terminal-header">
-                <span>CERA SECURE TERMINAL</span>
-                <span>NODE: ARCHIVE-01</span>
+
+                <span>
+                    CERA SECURE TERMINAL
+                </span>
+
+                <span>
+                    NODE: ARCHIVE-01
+                </span>
+
             </div>
+
 
             <div class="terminal-body">
-                <p class="boot-line">Initializing CERA archive environment...</p>
-                <p class="boot-line">Connecting to secure personnel registry...</p>
-                <p class="boot-line">Establishing encrypted session...</p>
+
+                <p class="boot-line">
+                    Initializing CERA archive environment...
+                </p>
+
+                <p class="boot-line">
+                    Connecting to secure personnel registry...
+                </p>
+
+                <p class="boot-line">
+                    Establishing encrypted session...
+                </p>
+
 
                 <div class="login-box">
-                    <div class="line">
-                        <span class="label">USERNAME:</span>
-                        <span id="usernameText" class="typed-text"></span>
-                    </div>
 
                     <div class="line">
-                        <span class="label">PASSWORD:</span>
-                        <span id="passwordText" class="typed-text"></span>
+
+                        <span class="label">
+                            USERNAME:
+                        </span>
+
+                        <span
+                            id="usernameText"
+                            class="typed-text"
+                        ></span>
+
                     </div>
+
+
+                    <div class="line">
+
+                        <span class="label">
+                            PASSWORD:
+                        </span>
+
+                        <span
+                            id="passwordText"
+                            class="typed-text"
+                        ></span>
+
+                    </div>
+
                 </div>
+
 
                 <div class="status-box">
-                    <p id="statusText">Awaiting credentials...</p>
+
+                    <p id="statusText">
+                        Awaiting credentials...
+                    </p>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- ACCESS GRANTED OVERLAY -->
-        <section id="access-screen" class="access-screen hidden">
+
+
+        <!-- ===================================================== -->
+        <!-- ACCESS GRANTED SCREEN                                -->
+        <!-- ===================================================== -->
+
+        <section
+            id="access-screen"
+            class="access-screen hidden"
+        >
+
             <div class="access-box">
-                <h1>ACCESS GRANTED</h1>
-                <p>Clearance confirmed.</p>
-                <p>Welcome to the CERA Archive Network.</p>
+
+                <h1>
+                    ACCESS GRANTED
+                </h1>
+
+                <p>
+                    Clearance confirmed.
+                </p>
+
+                <p>
+                    Welcome to the CERA Archive Network.
+                </p>
+
             </div>
+
         </section>
 
-        <!-- MAIN DASHBOARD -->
-        <section id="dashboard" class="dashboard hidden">
+
+
+        <!-- ===================================================== -->
+        <!-- MAIN CERA COMPUTER                                   -->
+        <!-- ===================================================== -->
+
+        <section
+            id="dashboard"
+            class="dashboard hidden"
+        >
+
+            <!-- Top bar -->
+
             <header class="topbar">
-                <div>
-                    <h1>CERA ARCHIVE SYSTEM</h1>
-                    <p>Containment Examination & Research Authority</p>
+
+                <div class="brand-area">
+
+                    <div class="brand-title">
+                        CERA ARCHIVE SYSTEM
+                    </div>
+
+                    <div class="brand-subtitle">
+                        Containment Examination & Research Authority
+                    </div>
+
                 </div>
+
 
                 <div class="clearance-panel">
-                    <p><strong>Operator:</strong> Dr. Harlow</p>
-                    <p><strong>Clearance:</strong> Level 4</p>
-                    <p><strong>Status:</strong> Active Session</p>
+
+                    <p>
+                        <strong>Operator:</strong>
+                        Dr. Harlow
+                    </p>
+
+                    <p>
+                        <strong>Clearance:</strong>
+                        Level 4
+                    </p>
+
+                    <p>
+                        <strong>Status:</strong>
+                        Active Session
+                    </p>
+
                 </div>
+
             </header>
 
+
+
+            <!-- Navigation -->
+
             <nav class="nav-buttons">
-                <button class="nav-btn">HOME</button>
-                <button class="nav-btn">DATABASE</button>
-                <button class="nav-btn">FACILITIES</button>
-                <button class="nav-btn">INCIDENTS</button>
-                <button class="nav-btn">PERSONNEL</button>
+
+                <button
+                    class="nav-btn active"
+                    type="button"
+                >
+                    HOME
+                </button>
+
+                <button
+                    class="nav-btn"
+                    type="button"
+                >
+                    DATABASE
+                </button>
+
+                <button
+                    class="nav-btn"
+                    type="button"
+                >
+                    FACILITIES
+                </button>
+
+                <button
+                    class="nav-btn"
+                    type="button"
+                >
+                    INCIDENTS
+                </button>
+
+                <button
+                    class="nav-btn"
+                    type="button"
+                >
+                    PERSONNEL
+                </button>
+
             </nav>
 
+
+
+            <!-- App-style archive buttons -->
+
             <main class="card-grid">
-                <a href="#" class="archive-card image-card entity-card">
-                    <div class="card-overlay">
-                        <h2>ENTITY FILES</h2>
-                        <p>Biological, hostile, passive, and unknown anomalies.</p>
+
+                <a
+                    href="#"
+                    class="archive-card"
+                >
+
+                    <div class="icon-container">
+
+                        <img
+                            src="entities.png"
+                            alt="Entities"
+                            class="archive-icon"
+                        >
+
                     </div>
+
+
+                    <div class="card-text">
+
+                        <h2>
+                            ENTITY FILES
+                        </h2>
+
+                        <p>
+                            Biological, hostile, passive, and unknown anomalies.
+                        </p>
+
+                    </div>
+
                 </a>
 
-                <a href="#" class="archive-card image-card facility-card">
-                    <div class="card-overlay">
-                        <h2>FACILITIES</h2>
-                        <p>Containment sites, labs, black locations, and sectors.</p>
+
+
+                <a
+                    href="#"
+                    class="archive-card"
+                >
+
+                    <div class="icon-container">
+
+                        <img
+                            src="facilities.png"
+                            alt="Facilities"
+                            class="archive-icon"
+                        >
+
                     </div>
+
+
+                    <div class="card-text">
+
+                        <h2>
+                            FACILITIES
+                        </h2>
+
+                        <p>
+                            Containment sites, laboratories, black locations, and sectors.
+                        </p>
+
+                    </div>
+
                 </a>
 
-                <a href="#" class="archive-card image-card incident-card">
-                    <div class="card-overlay">
-                        <h2>INCIDENT LOGS</h2>
-                        <p>Breaches, field events, recoveries, and failed operations.</p>
+
+
+                <a
+                    href="#"
+                    class="archive-card"
+                >
+
+                    <div class="icon-container">
+
+                        <img
+                            src="incidents.png"
+                            alt="Incidents"
+                            class="archive-icon"
+                        >
+
                     </div>
+
+
+                    <div class="card-text">
+
+                        <h2>
+                            INCIDENT LOGS
+                        </h2>
+
+                        <p>
+                            Breaches, field events, recoveries, and failed operations.
+                        </p>
+
+                    </div>
+
                 </a>
 
-                <a href="#" class="archive-card image-card personnel-card">
-                    <div class="card-overlay">
-                        <h2>PERSONNEL</h2>
-                        <p>Researchers, agents, security staff, and administration.</p>
+
+
+                <a
+                    href="#"
+                    class="archive-card"
+                >
+
+                    <div class="icon-container">
+
+                        <img
+                            src="personnel.png"
+                            alt="Personnel"
+                            class="archive-icon"
+                        >
+
                     </div>
+
+
+                    <div class="card-text">
+
+                        <h2>
+                            PERSONNEL
+                        </h2>
+
+                        <p>
+                            Researchers, agents, security staff, and administration.
+                        </p>
+
+                    </div>
+
                 </a>
+
             </main>
+
+
+
+            <!-- Bottom status bar -->
+
+            <footer class="system-footer">
+
+                <span>
+                    CERA INTERNAL NETWORK
+                </span>
+
+                <span>
+                    SECURE CONNECTION
+                </span>
+
+                <span>
+                    ARCHIVE NODE 01
+                </span>
+
+            </footer>
+
         </section>
+
     </div>
 
+
     <script src="script.js"></script>
+
 </body>
 </html>
