@@ -221,25 +221,25 @@ body {
 .entity-card {
     background-image:
         linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2)),
-        url("images/entities.jpg");
+        url("entities.png");
 }
 
 .facility-card {
     background-image:
         linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2)),
-        url("images/facilities.jpg");
+        url("facilities.png");
 }
 
 .incident-card {
     background-image:
         linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2)),
-        url("images/incidents.jpg");
+        url("incidents.png");
 }
 
 .personnel-card {
     background-image:
         linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2)),
-        url("images/personnel.jpg");
+        url("personnel.png");
 }
 
 .card-overlay {
